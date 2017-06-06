@@ -3,29 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Basic Selectors</title>
+    <style>
+      /*select children not grandchildren*/
+      article > p {
+        color: green;
+      }
+
+      /*selctor first child*/
+      h2 + p {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      ol > li:first-child {
+        color: deeppink;
+      }
+
+      ul li:last-child {
+        color: blue;
+      }
+
+      article > *:not(p) {
+        color: deeppink;
+      }
+
+      .social-list li:not(:last-child) a {
+        color: red;
+      }
+
+      li:first-child:last-child {
+        font-size: 100px;
+      }
+    </style>
 </head>
 <body>
 <div class="wrapper">
-  <haeder>
-
-    <haeder>
-      <div class="social">
-        <ul>
-          <li class=""><a href="http://www.twitter.com" class="twitter">twitter</a></li>
-          <li class=""><a href="http://www.facebook.com" class="facebook">facebook</a></li>
-          <li class=""><a href="http://www.linkedin.com" class="linkedin">linkedin</a></li>
-        </ul>
-      </div>
-    </haeder>
-
+  <header>
     <div class="social">
-      <ul class="socail-list">
+      <ul class="social-list">
         <li class="social-item"><a href="http://www.twitter.com" class="item twitter">twitter</a></li>
         <li class="social-item"><a href="http://www.facebook.com" class="item facebook">facebook</a></li>
         <li class="social-item"><a href="http://www.linkedin.com" class="item linkedin">linkedin</a></li>
       </ul>
     </div>
-  </haeder>
+  </header>
   <section class="container" id="primary">
     <header class="global-header">
         <h1>Primary Section✊&#10008;</h1>
